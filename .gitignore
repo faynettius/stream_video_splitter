@@ -1,0 +1,4 @@
+*.txt
+!requirements.txt
+clips/
+*.mp4

@@ -17,9 +17,15 @@ if "clips" not in os.listdir(os.getcwd()):
 
 mp4_file =   "TLT36.mp4"
 split_file = "TLT36.txt"
+# Accept arguments
 if len(sys.argv) > 2:
     mp4_file = sys.argv[1]
     split_file = sys.argv[2]
+# Add tourney name
+tourney_name = ""
+if len(sys.argv) > 3:
+    tourney_name = sys.argv[3]
+
 with open(split_file) as f:
     doc = f.read()
 lines = doc.split("\n")
@@ -29,6 +35,8 @@ for n, line in enumerate(lines):
     split_line = line.split("_")
     times = split_line[0]
     vod_name = split_line[1].strip()
+    if len(tourney_name) > 0:
+        vod_name = tourney_name + " " + vod_name
     both_times = times.strip().split("-")
     span = [change_to_seconds(both_times[0]), change_to_seconds(both_times[1])]
     print(span)
