@@ -20,7 +20,7 @@ I recommend you use VLC media (https://www.videolan.org/vlc/) player to do this,
 
 **5.** If you do this all correctly, it should populate the `clips` folder with your vods, split to the times you input for the splits file.
 
-# Info for code-savvy folks
+# Instructions for code-savvy folks
 
 ```
 git clone https://github.com/faynettius/stream_video_splitter.git
