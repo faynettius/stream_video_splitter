@@ -1,4 +1,5 @@
-#Instructions for low-tech folks
+# Instructions for low-tech folks
+
 **0.** Hit `Windows + R` and type in `powershell`, then hit enter. Type `python` and hit enter. Download whatever shows up. If this doesn't work, go download python manually from https://www.python.org/downloads/
 **1. **Download the VoD via twitch leecher which you can download here: https://github.com/Franiac/TwitchLeecher/releases
 **2.  **Download this https://github.com/faynettius/stream_video_splitter , and also run `pip install ffmpeg` and `pip install moviepy` on your command line from step 0. If that that doesn't work, run `python -m pip install ffmpeg`
