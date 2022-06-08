@@ -19,3 +19,13 @@ I recommend you use VLC media (https://www.videolan.org/vlc/) player to do this,
 **4.** Once you have the split file and the video file, run the `split_videos.bat` and type in the information it asks for. It should ask for the name of the VoD file, the splits file, and the name of the tournament. You can tab-complete these fields (type in the first few letters of the file you want, then hit `TAB` and it will fill the rest in)
 
 **5.** If you do this all correctly, it should populate the `clips` folder with your vods, split to the times you input for the splits file.
+
+# Info for code-savvy folks
+
+```
+git clone https://github.com/faynettius/stream_video_splitter.git
+cd stream_video_splitter
+pip install -r requirements.txt
+```
+
+See steps 3 and 4 above for how to use the splitter
