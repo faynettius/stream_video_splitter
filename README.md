@@ -4,7 +4,17 @@
 
 **1.** Download the VoD via twitch leecher which you can download here: https://github.com/Franiac/TwitchLeecher/releases
 
-**2.** Download this https://github.com/faynettius/stream_video_splitter , and also run `pip install ffmpeg` and `pip install moviepy` on your command line from step 0. If that that doesn't work, run `python -m pip install ffmpeg`
+**2.** Download this https://github.com/faynettius/stream_video_splitter , and also run the following on your command line from step 0
+
+```
+pip install ffmpeg
+pip install moviepy
+```
+**If that that doesn't work**, run
+```
+python -m pip install ffmpeg
+python -m pip install moviepy
+```
 
 **3.** Go through the VoD and note down the times and filename as follows:
 
