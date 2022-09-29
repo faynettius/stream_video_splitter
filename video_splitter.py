@@ -1,6 +1,7 @@
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import os
 import sys
+import re
 
 def change_to_seconds(time_format):
     smh = [1,60,3600]
@@ -11,6 +12,11 @@ def change_to_seconds(time_format):
     for i,t in enumerate(time_list):
         total_seconds += int(t)*smh[i]
     return total_seconds
+
+def clean_filename(vod_name):
+      fileName = re.sub('[\/:*?"<>|]','',vod_name)
+      return fileName
+
 
 if "clips" not in os.listdir(os.getcwd()):
     os.mkdir("clips")
@@ -35,6 +41,7 @@ for n, line in enumerate(lines):
     split_line = line.split("_")
     times = split_line[0]
     vod_name = split_line[1].strip()
+    vod_name = clean_filename(vod_name)
     if len(tourney_name) > 0:
         vod_name = tourney_name + " " + vod_name
     both_times = times.strip().split("-")
