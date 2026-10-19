@@ -1,7 +1,8 @@
-from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
+# from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import os
 import sys
 import re
+import subprocess as sb
 
 def change_to_seconds(time_format):
     smh = [1,60,3600]
@@ -47,5 +48,7 @@ for n, line in enumerate(lines):
     both_times = times.strip().split("-")
     span = [change_to_seconds(both_times[0]), change_to_seconds(both_times[1])]
     print(span)
-
-    ffmpeg_extract_subclip(mp4_file, span[0], span[1], targetname= "clips/" + vod_name+".mp4")
+    clip_name = f'''"clips/{vod_name}.mp4"'''
+    # ffmpeg_extract_subclip(mp4_file, span[0], span[1], targetname= "clips/" + vod_name+".mp4")
+    # ffmpeg -ss 4:18:30 -to 4:19:01 -i .\TLT84.mp4 -c copy -avoid_negative_ts 1 cut.mp4
+    sb.run(f"ffmpeg -ss {span[0]} -to {span[1]} -i {mp4_file} -c copy -avoid_negative_ts 1 {clip_name}")
