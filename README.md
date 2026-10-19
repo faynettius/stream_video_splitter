@@ -4,17 +4,7 @@
 
 **1.** Download the VoD via twitch leecher which you can download here: https://github.com/Franiac/TwitchLeecher/releases
 
-**2.** Download this https://github.com/faynettius/stream_video_splitter , and also run the following on your command line from step 0
-
-```
-pip install ffmpeg
-pip install moviepy
-```
-**If that that doesn't work**, run
-```
-python -m pip install ffmpeg
-python -m pip install moviepy
-```
+**2.** Download ffmpeg (https://ffmpeg.org/) and add it to your command line. Put the .exe in your path, make sure `ffmpeg` runs on command line before continuing.
 
 **3.** Go through the VoD and note down the times and filename as follows:
 
@@ -35,7 +25,6 @@ I recommend you use VLC media (https://www.videolan.org/vlc/) player to do this,
 ```
 git clone https://github.com/faynettius/stream_video_splitter.git
 cd stream_video_splitter
-pip install -r requirements.txt
 ```
 
 See steps 3 and 4 above for how to use the splitter
